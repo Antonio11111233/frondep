@@ -13,7 +13,7 @@ export type TypeView = 'list' | 'kanban'
 export function TasksView() {
 	const [type, setType, isLoading] = useLocalStorage<TypeView>({
 		key: 'view-type',
-		defaultValue: 'list'
+		defaultValue: 'kanban'
 	})
 
 	if (isLoading) return <Loader />
