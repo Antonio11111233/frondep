@@ -1,4 +1,4 @@
-import ServiceSlider from '../components/ServiceSlider'
+// import ServiceSlider from '../components/ServiceSlider'
 import Image from 'next/image'
 import React from 'react'
 import Navbar from '../components/Navbar'
@@ -24,7 +24,7 @@ const Page = () => {
       className='w-full h-full hidden md:block'
       />
         </div>
-        <ServiceSlider />
+        {/* <ServiceSlider /> */}
         <Navbar />
     </div>
   )
