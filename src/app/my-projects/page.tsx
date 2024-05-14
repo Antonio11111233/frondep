@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Particle from "../components/Particle";
-import ProjectSlider from "../components/ProjectSlider";
+// import ProjectSlider from "../components/ProjectSlider";
 import React from "react";
 
 const Page = () => {
