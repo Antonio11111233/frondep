@@ -48,7 +48,7 @@ export function SingleSelect({
 						{getValue()}
 					</Badge>
 				) : (
-					<Badge>Click for select</Badge>
+					<Badge>Нажмите, чтобы выбрать</Badge>
 				)}
 			</button>
 			{value && (

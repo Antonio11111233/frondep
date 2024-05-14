@@ -22,15 +22,15 @@ export function SwitcherView({ setType, type }: ISwitcherView) {
 				<ListTodo />
 				List
 			</button> */}
-			{/* <button
+			<button
 				className={cn('flex items-center gap-1', {
 					'opacity-40': type === 'list'
 				})}
 				onClick={() => setType('kanban')}
 			>
-				<Kanban />
-				Board
-			</button> */}
+				{/* <Kanban />
+				Board */}
+			</button>
 		</div>
 	)
 }

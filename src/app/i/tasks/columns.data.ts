@@ -13,34 +13,34 @@ dayjs.extend(isoWeek)
 export const FILTERS: Record<string, Dayjs> = {
 	today: dayjs().startOf('day'),
 	tomorrow: dayjs().add(1, 'day').startOf('day'),
-	'on-this-week': dayjs().endOf('isoWeek'),
+	'on-this-week': dayjs().endOf('week'),
 	'on-next-week': dayjs().add(1, 'week').startOf('day'),
 	later: dayjs().add(2, 'week').startOf('day')
 }
 
 export const COLUMNS = [
 	{
-		label: 'Today',
+		label: 'Сегодня',
 		value: 'today'
 	},
 	{
-		label: 'Tomorrow',
+		label: 'Завтра',
 		value: 'tomorrow'
 	},
 	{
-		label: 'On this week',
+		label: 'На этой неделе',
 		value: 'on-this-week'
 	},
 	{
-		label: 'On next week',
+		label: 'На следующе неделе',
 		value: 'on-next-week'
 	},
 	{
-		label: 'Later',
+		label: 'Позже',
 		value: 'later'
 	},
 	{
-		label: 'Completed',
+		label: 'Выполнено',
 		value: 'completed'
 	}
 ]

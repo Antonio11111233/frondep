@@ -2,7 +2,7 @@
 
 import { useMutation } from '@tanstack/react-query'
 import { useRouter } from 'next/navigation'
-import { useState } from 'react'
+import { JSX, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 
@@ -15,6 +15,12 @@ import { IAuthForm } from '@/types/auth.types'
 import { DASHBOARD_PAGES } from '@/config/pages-url.config'
 
 import { authService } from '@/services/auth.service'
+import Particle from '../components/Particle'
+import Example from '../example'
+import React from 'react'
+import "../in"
+
+
 
 export function Auth() {
 	const { register, handleSubmit, reset } = useForm<IAuthForm>({
@@ -39,13 +45,30 @@ export function Auth() {
 	const onSubmit: SubmitHandler<IAuthForm> = data => {
 		mutate(data)
 	}
-
+	
+	// let text = 'qwertyu';
+	// let output = '';
+	// let currentIndex = 0;
+	
+	// let intervalID = setInterval(() => {
+	// 	output += text[currentIndex];
+	// 	currentIndex += 1;
+	// 	console.log(output);
+	// 	if (currentIndex === text.length) {
+	// 		clearInterval(intervalID)
+	// 	};
+	// }, 1000)
+<div className='Scrambl'>
+	
+</div>
 	return (
 		<div className='flex min-h-screen'>
+		
 			<form
-				className='w-1/4 m-auto shadow bg-sidebar rounded-xl p-layout'
+				className='w-1/4 m-auto shadow bg-sidebar rounded-xl p-layout z-[3]'
 				onSubmit={handleSubmit(onSubmit)}
 			>
+				
 				<Heading title='Авторизация/Регистрация' />
 
 				<Field
@@ -67,7 +90,7 @@ export function Auth() {
 					{...register('password', {
 						required: 'Password is required!'
 					})}
-					extra='mb-6'
+					extra='mb-6 '
 				/>
 
 				<div className='flex items-center gap-5 justify-center'>
@@ -75,6 +98,17 @@ export function Auth() {
 					<Button onClick={() => setIsLoginForm(false)}>Регистрация</Button>
 				</div>
 			</form>
+			
+			<div className="absolute right-0 top-0 h-full w-[100%] z-[2]">
+			<Example />
+        <Particle/>
+		
+		
+      </div>
 		</div>
+		
 	)
 }
+
+
+
