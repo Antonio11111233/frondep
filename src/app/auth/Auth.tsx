@@ -16,9 +16,8 @@ import { DASHBOARD_PAGES } from '@/config/pages-url.config'
 
 import { authService } from '@/services/auth.service'
 import Particle from '../components/Particle'
-import Example from '../example'
 import React from 'react'
-import "../in"
+import '../globals.scss'
 
 
 
@@ -100,7 +99,7 @@ export function Auth() {
 			</form>
 			
 			<div className="absolute right-0 top-0 h-full w-[100%] z-[2]">
-			<Example />
+			<span className='Example__blinker'>_</span>Перезагрузите, если нет ответа
         <Particle/>
 		
 		
